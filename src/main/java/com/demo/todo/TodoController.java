@@ -92,4 +92,11 @@ public class TodoController {
 		return "redirect:/list-todos";
 	}
 
+	
+	@RequestMapping(value = "/trueController", method = RequestMethod.GET)
+	public String trueController(ModelMap model,@RequestParam int id){
+		Todo todo = service.retrieveTodo(id);
+		service.updateTodo_true(todo);
+		return "redirect:/list-todos";
+	}
 }

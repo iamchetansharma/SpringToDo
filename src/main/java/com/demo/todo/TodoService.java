@@ -40,8 +40,17 @@ public class TodoService {
 	public void updateTodo(Todo todo) {
 		todos.remove(todo);
 		todos.add(todo);
+	
 	}
-
+	public void updateTodo_true(Todo todo) {
+		todos.remove(todo);
+		todo.setDone(true);
+		todos.add(todo);
+		
+		
+		
+	
+	}
 	public void addTodo(String name, String desc, Date targetDate,
 			boolean isDone) {
 		todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
