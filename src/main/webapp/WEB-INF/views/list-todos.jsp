@@ -20,15 +20,15 @@
 							value="${todo.targetDate}" /></td>
 					<td>${todo.done}</td>
 					<td><a type="button" class="btn btn-primary"
-						href="/update-todo?id=${todo.id}">Edit</a> <a type="button"
-						class="btn btn-warning" href="/delete-todo?id=${todo.id}">Delete</a>
+						href="${pageContext.request.contextPath}/update-todo?id=${todo.id}">Edit</a> <a type="button"
+						class="btn btn-warning" href="${pageContext.request.contextPath}/delete-todo?id=${todo.id}">Delete</a>
 					</td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 	<div>
-		<a type="button" class="btn btn-success" href="/add-todo">Add</a>
+		<a type="button" class="btn btn-success" href="${pageContext.request.contextPath}/add-todo">Add</a>
 	</div>
 </div>
 <%@ include file="common/footer.jspf"%>
